@@ -1,0 +1,114 @@
+:root{
+    --backgroundMainColor: rgba(232, 226, 209);
+    /* --coffeColor: rgba(173, 157, 130, 0.8); */
+    --coffeColor: rgba(173, 157, 130);
+    /* --coffeColor2: rgba(149, 133, 106, 0.8); */
+    --mainFontType: 'Montserrat', sans-serif;
+    --handwritedFontType: 'Allison', cursive;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--mainFontType)
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body{
+    background-color: white;
+    overflow-x: hidden;
+    background-color: var(--backgroundMainColor);
+    color: var(--backgroundMainColor)
+}
+
+header{
+    position: sticky;
+    inset: 0;
+    width: 100%;
+    background-color: var(--coffeColor);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    z-index: 4;
+}
+
+header #header-name-author{
+    z-index: 5;
+    margin-left: 50px;
+    font-family: var(--handwritedFontType);
+    font-size: 7rem;
+}
+
+header #header-links{
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    min-width:  50%;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--backgroundMainColor);
+    padding: 10px 30px;
+    border: 1px solid var(--coffeColor);
+    /* border-radius: 10px; */
+}
+
+header nav a:active{
+    color: black;
+}
+
+header nav a:hover, header nav a:focus{
+    border: 1px solid var(--backgroundMainColor);
+}
+
+#waveImageBackground{
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    height: 200px;
+}
+
+#photos-showroom{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#pencilsPhoto{
+    /* border-radius: 50px; */
+    z-index: 2;
+    max-width: 100%;
+    transform: scale(1.2);
+    position: relative;
+    top: 100px;
+    left: 50px;
+
+}
+
+#aboutMeSection{
+    /* display: flex; */
+    height: 100vh;
+    z-index: 11111;
+    color: red;
+}
+
+#authorPhoto{
+    width: 500px;
+}
