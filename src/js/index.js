@@ -1,10 +1,11 @@
 const websiteHeader = document.getElementById("header");
 const wavesImage = document.getElementById("waveImageBackground");
+let websiteHeaderPosition = '';
+const htmlElement = document.documentElement;
 
 function stickingWavesImageToHeader() { 
-    const websiteHeaderPosition = websiteHeader.getBoundingClientRect().bottom - 1;
-    wavesImage.style.top = websiteHeaderPosition+"px";
-    console.log(websiteHeaderPosition);
+    websiteHeaderPosition = websiteHeader.getBoundingClientRect().bottom - 1;
+    wavesImage.style.top = `${websiteHeaderPosition}px`;
     console.log(wavesImage.getBoundingClientRect().top);
 }
 
@@ -19,8 +20,15 @@ function waveSizeImagePicker() {
     }
 }
 
-// addEventListener("onload")
-// stickingWavesImageToHeader();
+function setScrollVar(){
+    const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
+    htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100))
+    // console.log()
+}
+
+addEventListener("scroll", () => {
+    setScrollVar();
+})
 
 addEventListener("resize", () => {
     location.reload(true);

@@ -5,6 +5,7 @@
     /* --coffeColor2: rgba(149, 133, 106, 0.8); */
     --mainFontType: 'Montserrat', sans-serif;
     --handwritedFontType: 'Allison', cursive;
+    --scroll: 0;
 }
 
 *{
@@ -12,6 +13,10 @@
     margin: 0;
     padding: 0;
     font-family: var(--mainFontType)
+}
+
+::selection{
+    background-color: rgba(219, 172, 52);
 }
 
 .material-symbols-outlined {
@@ -42,11 +47,15 @@ header{
     z-index: 4;
 }
 
-header #header-name-author{
+header #header-author-details{
     z-index: 5;
     margin-left: 50px;
+}
+
+header #header-author-details-name{
     font-family: var(--handwritedFontType);
-    font-size: 7rem;
+    font-size: 6rem;
+    letter-spacing: 2px;
 }
 
 header #header-links{
@@ -77,8 +86,10 @@ header nav a:hover, header nav a:focus{
 #waveImageBackground{
     position: absolute;
     left: 0;
+    /* top: var(--wavesYPosition); */
     z-index: 3;
     height: 200px;
+    translate: 0 calc(-1%* (max(var(--scroll), 50) - 50) * 100 / 50);
 }
 
 #photos-showroom{
