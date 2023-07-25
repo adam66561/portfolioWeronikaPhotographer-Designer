@@ -58,6 +58,13 @@ header #header-author-details-name{
     letter-spacing: 2px;
 }
 
+header #header-author-details-profession{
+    font-family: var(--mainFontType);
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
 header #header-links{
     z-index: 5;
     display: flex;
