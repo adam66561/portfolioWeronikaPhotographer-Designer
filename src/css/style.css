@@ -1,8 +1,7 @@
 :root{
     --backgroundMainColor: rgba(232, 226, 209);
-    /* --coffeColor: rgba(173, 157, 130, 0.8); */
     --coffeColor: rgba(173, 157, 130);
-    /* --coffeColor2: rgba(149, 133, 106, 0.8); */
+    --goldColor: rgba(219, 172, 52);
     --mainFontType: 'Montserrat', sans-serif;
     --handwritedFontType: 'Allison', cursive;
     --scroll: 0;
@@ -16,7 +15,7 @@
 }
 
 ::selection{
-    background-color: rgba(219, 172, 52);
+    background-color: var(--goldColor);
 }
 
 .material-symbols-outlined {
@@ -34,12 +33,29 @@ body{
     color: var(--backgroundMainColor)
 }
 
+#startingPage-showroom{
+    position: relative;
+    height: 100vh;
+}
+
+#linkToScrollDown{
+    position: absolute;
+    bottom: 20px;
+    z-index: 9;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: calc(50% - 50px);
+    z-index: 2;
+}
+
 header{
+    translate: 0 calc(-1%* (max(var(--scroll), 50) - 50) * 100 / 50);
     position: sticky;
     inset: 0;
     width: 100%;
     background-color: var(--coffeColor);
-    min-height: 200px;
+    min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,15 +70,19 @@ header #header-author-details{
 
 header #header-author-details-name{
     font-family: var(--handwritedFontType);
-    font-size: 6rem;
+    font-size: 4rem;
     letter-spacing: 2px;
+    height: 70%;
 }
 
 header #header-author-details-profession{
+    position: absolute;
     font-family: var(--mainFontType);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 3px;
     text-transform: capitalize;
+    height: 30%;
+
 }
 
 header #header-links{
@@ -83,7 +103,7 @@ header nav a{
 }
 
 header nav a:active{
-    color: black;
+    color: var(--goldColor);
 }
 
 header nav a:hover, header nav a:focus{
@@ -96,7 +116,7 @@ header nav a:hover, header nav a:focus{
     /* top: var(--wavesYPosition); */
     z-index: 3;
     height: 200px;
-    translate: 0 calc(-1%* (max(var(--scroll), 50) - 50) * 100 / 50);
+    /* translate: 0 calc(-1%* (max(var(--scroll), 50) - 50) * 100 / 50); */
 }
 
 #photos-showroom{
@@ -129,4 +149,18 @@ header nav a:hover, header nav a:focus{
 
 #authorPhoto{
     width: 500px;
+}
+
+#contactSection{
+    /* display: flex; */
+    height: 100vh;
+    z-index: 11111;
+    color: red;
+}
+
+#footerSection{
+    /* display: flex; */
+    min-height: 20vh;
+    z-index: 11111;
+    background-color: var(--coffeColor);
 }

@@ -1,3 +1,14 @@
+import Typed from 'typed.js';
+
+const typed = new Typed('#header-author-details-profession', {
+    strings: ['<i>Photographer</i>', '<i>Artist</i>', '<i>Graphic Designer</i>', '<i>Interior Designer</i>'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    smartBackspace: true,
+    loop: true,
+    showCursor: false,
+});
+
 const websiteHeader = document.getElementById("header");
 const wavesImage = document.getElementById("waveImageBackground");
 let websiteHeaderPosition = '';
