@@ -1,1 +1,0 @@
-browserify ./src/js/index.js -p esmify > ./src/js/bundle.js

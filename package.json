@@ -1,9 +1,23 @@
 {
+  "name": "bund",
+  "private": true,
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
   "dependencies": {
-    "browserify": "^17.0.0",
+    "lodash": "^4.17.21",
     "typed.js": "^2.0.16"
   },
   "devDependencies": {
-    "esmify": "^2.1.1"
+    "esmify": "^2.1.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

@@ -1,3 +1,4 @@
+import lodash from 'lodash';
 import Typed from 'typed.js';
 
 const typed = new Typed('#header-author-details-profession', {
